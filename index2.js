@@ -1,14 +1,21 @@
 let header = document.querySelector("header");
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
-var typed = new Typed(".typing",{
-    strings:["footballer","web designer","Front-end Developer","guitarist"],
-    
-    typeSpeed:150,
-    BackSpeed:40,
-    loop:true
-  })
 
+// Clear the typing element before initialization
+document.querySelector(".typing").textContent = "";
+
+var typed = new Typed(".typing", {
+    strings: [ "System Engineer @ TCS", "Full-Stack Developer", "AI/ML Developer","Open-source contributor", "Problem solver"],
+    typeSpeed: 100,
+    backSpeed: 90,
+    loop: true,
+    startDelay: 500,
+    backDelay: 2000,
+    showCursor: true,
+    cursorChar: "|",
+    autoInsertCss: true
+});
 
 window.addEventListener("scroll", () => {
   header.classList.toggle("shadow", window.scrollY > 0);
